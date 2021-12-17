@@ -25,9 +25,11 @@ class Challenge extends React.Component {
         
         let rLeft = null
         let rRight = null
+        
         if (this.props.bookRows != null) {
+            let sortedRows = this.props.bookRows.sort((a,b) => a[0]>b[0] ? 1:((a[0]<b[0]) ? -1:0))
             let total = 0
-            rLeft = this.props.bookRows.map((v,i) => {
+            rLeft = sortedRows.map((v,i) => {
                 if (v[2]>0) {
                     total += v[2]
                     let fmtAmount = v[2].toLocaleString('en-US',{ minimumFractionDigits: 4,maximumFractionDigits: 4 })
@@ -41,7 +43,7 @@ class Challenge extends React.Component {
                 }
             })
             total = 0
-            rRight = this.props.bookRows.map((v,i) => {
+            rRight = sortedRows.map((v,i) => {
                 if (v[2]<0) {
                     total += -v[2]
                     let amount = -v[2]
