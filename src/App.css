@@ -1,7 +1,31 @@
 .App {
   text-align: center;
 }
-
+body {
+  background-color: #142330;
+}
+.bookHeader {
+  color: white;
+}
+.bookHeaderTicket {
+  color: #ACB2B8;
+}
+.widget {
+  background-color: #1C2D3C;
+  width: 500px;
+  border: 1px solid #151F25;
+}
+.widget HR {
+  color: #323D48;
+}
+.widget THEAD {
+  color: #ACB2B8;
+  font-size: 14px;
+}
+.widget TBODY {
+  color: white;
+  font-size: 13px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
